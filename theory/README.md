@@ -100,6 +100,10 @@
     - **Preorder traversal** is when a node is visited before it's descendants
     - **Postorder traversal** is when a node is visited after it's descendants, starts at children and works along siblings then up a level to the parent
     - **Breadth first traversal** is visiting all nodes at depth `d` before visiting nodes at depth `d+1`
+- Binary search trees are a common implementation for searching
+    - Searching takes **O(logn)**, with adding/removal taking **O(n)**
+    - Keys are stored in internal nodes and external nodes do not store items
+    - In-order traversal of binary tree visits the keys in increasing order
 
 ## Heaps
 - Binary tree storing keys at the node
@@ -151,6 +155,16 @@
         - Due to this, the map cannot store `null` at a key
 
 ## Graphs
+- Graphs are data structure which contain `V` nodes/vertices and `E` edges connecting them nodes/vertices to each other
+- The edges can be directed or undirected, resulting in one or bidirectional edges
+- Terminology
+    - An edge **incident** on a vertex is one which connects to it
+    - Two vertices are **adjacent** if there exists an edge which connects them
+    - The **degree** of a vertex is the number of edges which are connected to it
+    - A **path** is a sequence of vertices/edges between two vertices, a path is **simple** if it contains unique vertices and edges
+    - A **cycle** is path which starts and ends at the same vertex, it is **simple** if it contains unique vertices and edges
+    - A graph `S` is a **subgraph** of `G` if all the vertices of `S` are a subset of the vertices of `G`
+- Implementation of graphs 
 
 ## Strings and Text Processing
 ### Matching Algorithms
@@ -159,6 +173,10 @@
 
 ### Concatenation
 
-## Hashing and HashMaps
+## Hashing and Hash Tables
+- Hash code provide a way to map data types uniquely with minimal chance of two values having the same hash
+    - Modulus operator provides a way for the value to effectively unreversible
+- Hash table apply algorithms to convert data to an integer to map to a value
+    - 
 
 ## Implementation Tricks
