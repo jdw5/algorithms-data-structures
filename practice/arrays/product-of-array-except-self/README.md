@@ -14,3 +14,9 @@ Output: [24,12,8,6]
 ```
 
 ## Solution
+### With Division
+
+### Without Division
+- Loop forward and then loop backward to calculate the products
+- So you build up the array as the multiplied of the current by the previous
+- Multiply the previous loop by the forward loop
