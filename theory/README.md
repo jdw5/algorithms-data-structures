@@ -180,3 +180,21 @@
     - 
 
 ## Implementation Tricks
+- Input is sorted?
+    - Find an element using [binary search]() in **O(log n)**
+- Input is a binary tree?
+    - Find an element using [DFS]() for pre, in or postorder in **O(n)**
+    - [BFS]() for level order in **O(n)** 
+- Input is a graph?
+    - Use [DFS]() which runs in **O(n)** implemented with recursrion or a stack
+    - Alternatively, use [BFS]() which runs in **O(n)** implemented with a queue
+- Find the top/least `k`th element
+    - [QuickSelect]() averages **O(n)** but can be **O(n^2)**
+    - [Heap]() is an alternative running in **O(n log k)**
+- Sorting problem?
+    - [QuickSort]() runs in **O(n log n)** average but can be **O(n^2)**
+    - Mergesort runs in **O(n log n)** always
+    - Most languages with built-in sorts will use mergesort
+- Finding distance in trees or graphs
+    - [BFS]() for non-weighted problems runs in **O(n)**
+    - Dijkstra is it is not weighted runs in **O(E log V)**
