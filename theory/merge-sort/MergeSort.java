@@ -2,7 +2,7 @@ public class MergeSort {
     public static void msort(int[] nums) {
         msort(nums, 0, nums.length - 1);
     }
-    private static void msort(int[] nums, int l, int r) {
+    public static void msort(int[] nums, int l, int r) {
         if (l >= r) return;
 
         int m = (l + r) / 2;
