@@ -198,3 +198,68 @@
 - Finding distance in trees or graphs
     - [BFS]() for non-weighted problems runs in **O(n)**
     - Dijkstra is it is not weighted runs in **O(E log V)**
+
+## Common Pattern Solutions
+### Windowing
+- Matches problems which involve windowing an array or linked list, such as when finding subarrays or consecutive elements matching a pattern
+- Starting at first element, and shifts right by 1 and adjusts the length of the window according to the problem
+
+### Two Pointers / Iterators
+- Pattern where two points iterate through data in tandem until certain conditions are meta
+- Matches problems when searching pairs in a sorted array or linked list
+- Used for summing match problems or comparing strings
+- Can also be applied to fast and slow pointers which is useful when dealing with cyclic data structures
+- Used for problems with loops in a linked list or determining index with known length
+
+### Merge Intervals
+- Pattern for dealing with overlapping intervals where two intervals can relate to each other in 6 days with overlap
+
+### Cyclic Sort
+- Matches problems dealing with integer arrays containing numbers in a specified range
+- Iterate over a list and if the current number is not at the correct index, swap it 
+
+### Reversal Linked-list
+- Patterns matching reversing the links between nodes in a linked list 
+- Start with the current node pointing to the head of the linked list and the previous will point to the previous processed node
+Reverse the current node by pointing it to the previous before moving to the next node
+- Always update the previous to point to the previous node that has been processed
+
+### Tree BFS and DFS
+- BFS is a tree traversal using a queue to keep track of nodes at a level for level-by-level order
+- Functions by pushing root node to the queue, removing each node from the queue and inserting all children into the queue
+- DFS is a recursive means of traversing starting at the root and checking children
+
+
+### Two Heap
+- Matches problems where elements can be divided into two parts and need to know the smallest/biggest element
+- Employs a min heap to find the smallest element and a max heap to find the biggest
+- Stores the first half of numbers in the first half and the second half in a min heap to determine biggest/smallest
+- Median of the current list can be calculated from the top element of the two heaps
+
+### Subsets
+- Matches permutations and combination style questions through a BFS approach
+- Given a set of values, create an empty set, and then add each element to all existing subsets
+
+
+### Binary Search - Modified
+- Matches problems with a sorted array, linked list or matrix to find an element
+- Process
+    1. Find the middle index such as `(start + end)/2` but this can overflow so `start + (end - start)/2`
+    2. If key is equal to the number at index, then return middle
+    3. Else, check if `key < arr[middle]`. If true, reduce search to `end=middle-1` else `end=middle+1`
+
+
+### Top K Elements
+- Matches problems asking to find the top, smallest or most frequent `K` element(s) among a given set
+- Heaps are the best data structure for keeping track of elements
+    1. Insert `K` elements into min/max heap depending on task
+    2. Iterate through the remaining numbers and if one is found that is larger than what is in the heap then remove that number and insert the larger one
+
+
+### K-Way Merge
+- Given `k` sorted arrays, need to traverse elements
+- Push the smallest element of each array into a min heap to get the minimum, with the minimum, push the next element
+    1. Insert the first element of each array into a min heap
+    2. Remove the smallest element from the heap and add to the merged list
+    3. Insert the next element of the list into the heap
+    4. Repeat 2,3 to create a merge list in sorted order
