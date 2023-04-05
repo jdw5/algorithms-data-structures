@@ -212,7 +212,7 @@
 - Used for problems with loops in a linked list or determining index with known length
 
 ### Merge Intervals
-- Pattern for dealing with overlapping intervals where two intervals can relate to each other in 6 days with overlap
+- Pattern for dealing with overlapping intervals where two intervals can relate to each other in 6 ways with overlap
 
 ### Cyclic Sort
 - Matches problems dealing with integer arrays containing numbers in a specified range
